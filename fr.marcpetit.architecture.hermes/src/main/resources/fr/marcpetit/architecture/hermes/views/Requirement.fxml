@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox id="requirement" prefWidth="300.0"
+	xmlns:fx="http://javafx.com/fxml"
+	fx:controller="fr.marcpetit.architecture.hermes.controllers.Requirement">
+
+	<HBox>
+		<Label text="Id"/>
+		<TextField fx:id="id"/>
+	</HBox>
+
+	<HBox>
+		<Label text="Text"/>
+		<TextField fx:id="text"/>
+	</HBox>
+
+	<HBox>
+		<Label text="Category"/>
+		<ComboBox fx:id="category"/>
+	</HBox>
+
+	<HBox>
+		<Label text="Milestone"/>
+		<ComboBox fx:id="milestone"/>
+	</HBox>
+
+	<stylesheets>
+    	<URL value="@style.css" />
+	</stylesheets>
+</VBox>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox id="product" prefHeight="30.0" prefWidth="600.0"
+	xmlns:fx="http://javafx.com/fxml"
+	fx:controller="fr.marcpetit.architecture.hermes.controllers.Product">
+
+	<Label text="Product name"/>
+	<TextField fx:id="productName"/>
+
+	<Label text="reference"/>
+	<TextField fx:id="productReference"/>
+
+	<stylesheets>
+    	<URL value="@style.css" />
+	</stylesheets>
+</HBox>

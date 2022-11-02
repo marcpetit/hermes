@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.control.cell.*?>
+
+<BorderPane fx:id="mainPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.marcpetit.architecture.hermes.controllers.Main">
+	<top>
+		<MenuBar>
+			<Menu text="File">
+				<MenuItem onAction="#newProduct" text="New product specification" />
+				<MenuItem fx:id="saveAs" onAction="#saveProductAs" text="Save as" />
+				<MenuItem fx:id="open" onAction="#openProduct" text="Open" />
+				<SeparatorMenuItem />
+				<MenuItem fx:id="editProduct" onAction="#editProduct" text="Properties" />
+				<SeparatorMenuItem />
+				<MenuItem onAction="#exitApplication" text="Quit" />
+			</Menu>
+			<Menu text="Requirements">
+				<MenuItem fx:id="addRequirement" onAction="#addRequirement" text="Add a new requirement" />
+			</Menu>
+			<Menu text="Categories">
+				<MenuItem fx:id="manageCategories" onAction="#manageCategories" text="Manage categories" />
+			</Menu>
+		</MenuBar>
+	</top>
+
+	<center>
+		<ScrollPane fx:id="scroll" vbarPolicy="AS_NEEDED">
+			<fx:include fx:id="requirements" source="Requirements.fxml" />
+		</ScrollPane>
+	</center>
+
+	<right>
+		<fx:include fx:id="requirement" source="Requirement.fxml" />
+	</right>
+
+	<bottom>
+		<fx:include fx:id="product" source="Product.fxml" />
+	</bottom>
+</BorderPane>

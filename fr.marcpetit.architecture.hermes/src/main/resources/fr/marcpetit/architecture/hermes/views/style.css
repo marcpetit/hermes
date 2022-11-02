@@ -1,0 +1,12 @@
+HBox {
+	-fx-spacing: 5;
+	-fx-padding: 2;
+}
+
+.text-input:readonly {
+    -fx-background-color: transparent;
+}
+
+.label {
+	-fx-max-height: Infinity
+}

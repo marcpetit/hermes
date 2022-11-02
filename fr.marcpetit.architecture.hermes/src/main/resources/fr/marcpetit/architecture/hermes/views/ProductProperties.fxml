@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox id="productPMroperties" prefHeight="30.0" prefWidth="600.0"
+	xmlns:fx="http://javafx.com/fxml"
+	fx:controller="fr.marcpetit.architecture.hermes.controllers.ProductProperties">
+
+	<HBox>
+		<Label text="Product name"/>
+		<TextField fx:id="productName"/>
+	</HBox>
+
+	<HBox>
+		<Label text="reference"/>
+		<TextField fx:id="productReference"/>
+	</HBox>
+
+	<HBox>
+		<Label text="milestones"/>
+		<ListView fx:id="milestones"/>
+		<VBox>
+			<Button text="Append milestone" onAction="#appendMilestone"/>
+			<TextField fx:id="milestone"/>
+		</VBox>
+	</HBox>
+
+	<HBox>
+		<Button text="Validate" onAction="#validate"/>
+		<Button text="Cancel" onAction="#cancel"/>
+	</HBox>
+
+	<stylesheets>
+    	<URL value="@style.css" />
+	</stylesheets>
+</VBox>
