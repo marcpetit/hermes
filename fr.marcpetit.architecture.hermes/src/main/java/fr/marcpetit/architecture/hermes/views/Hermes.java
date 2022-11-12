@@ -40,15 +40,6 @@ public class Hermes extends Application {
           } catch (IOException ex) {
             System.err.println("Error loading : " + ex);
           }
-        /*
-        // https://edencoding.com/force-refresh-scene
-        //this goes after you've defined your scene, but before you display your stage
-        scene.addPreLayoutPulseListener(() -> {
-            long refreshTime = System.nanoTime();
-            System.out.println(refreshTime - lastRefreshTime);
-            lastRefreshTime = refreshTime;
-        });
-        */
         return scene;
     }
     
