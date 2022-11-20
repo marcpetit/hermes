@@ -1,6 +1,6 @@
 @ui
+@FReq-01
 Feature: A product manager can create a product
-	# FReq-01
 
 	Scenario: Create a product from scratch
 		Given the application is started

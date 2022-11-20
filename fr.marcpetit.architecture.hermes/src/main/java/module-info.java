@@ -10,4 +10,6 @@ module fr.marcpetit.architecture.hermes {
 	requires javafx.fxml;
 	requires javafx.base;
 	requires jakarta.xml.bind;
+	requires java.base;
+	requires jdk.javadoc;
 }

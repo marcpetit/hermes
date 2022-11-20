@@ -11,6 +11,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<javafx.version>11.0.2</javafx.version>
 		<jakarta.version>3.0.0</jakarta.version>
+		<testfx.version>4.0.15-alpha</testfx.version>
 	</properties>
 
 	<dependencyManagement>
@@ -87,6 +88,27 @@
 			<artifactId>junit-jupiter</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- TestFX -->
+		<dependency>
+			<groupId>org.testfx</groupId>
+			<artifactId>testfx-core</artifactId>
+			<version>${testfx.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testfx</groupId>
+			<artifactId>testfx-junit</artifactId>
+			<version>${testfx.version}</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 
@@ -156,6 +178,10 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.0.0-M7</version>
+				<!-- FIXME : Seems somehow equired for TestFX/JavaFX module compatibility -->
+				<configuration>
+					<forkCount>0</forkCount>
+				</configuration>
 			</plugin>
 
 		</plugins>
