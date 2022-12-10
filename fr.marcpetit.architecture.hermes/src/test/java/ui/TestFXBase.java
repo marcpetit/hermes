@@ -14,9 +14,16 @@ import javafx.stage.Stage;
 
 public class TestFXBase extends ApplicationTest {
 
+	private static boolean isHeadless = true;
+	
 	protected Stage stage;
 
 	static {
+	    if (isHeadless) {
+	        System.setProperty("testfx.robot", "glass");
+	        System.setProperty("testfx.headless", "true");
+	    }
+
 	    try {
 	        ApplicationTest.launch(Hermes.class);
 	    } catch (Exception e) {
