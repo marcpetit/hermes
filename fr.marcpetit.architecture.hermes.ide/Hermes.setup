@@ -63,7 +63,7 @@
       location="${installation.location}/git"
       remoteURI="https://github.com/marcpetit/hermes.git"
       pushURI=""
-      checkoutBranch="develop">
+      checkoutBranch="release/1.0.0">
     <description>${scope.project.label}</description>
   </setupTask>
   <setupTask
