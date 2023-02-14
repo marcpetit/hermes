@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.TreeItemPropertyValueFactory?>
+
+<VBox prefHeight="300.0" prefWidth="600.0"
+	xmlns:fx="http://javafx.com/fxml"
+	fx:controller="fr.marcpetit.architecture.hermes.controllers.Categories">
+	
+	<TreeTableView fx:id="categories">
+		<columns>
+			<TreeTableColumn fx:id="nameCol" text="Category">
+	            <cellValueFactory>
+	                <TreeItemPropertyValueFactory property="name" />
+	            </cellValueFactory>
+			</TreeTableColumn>
+			<TreeTableColumn fx:id="descriptionCol" text="Description">
+	            <cellValueFactory>
+	                <TreeItemPropertyValueFactory property="description" />
+	            </cellValueFactory>
+			</TreeTableColumn>
+			<TreeTableColumn fx:id="uriCol" text="Uri">
+	            <cellValueFactory>
+	                <TreeItemPropertyValueFactory property="uri" />
+	            </cellValueFactory>
+			</TreeTableColumn>
+		</columns>
+	</TreeTableView>
+
+	<HBox>
+		<Button text="Add child" onAction="#addChild"/>
+		<Button text="Delete" onAction="#delete"/>
+	</HBox>
+
+	<HBox>
+		<Button text="Validate" onAction="#validate"/>
+		<Button text="Cancel" onAction="#cancel"/>
+	</HBox>
+	
+	<stylesheets>
+    	<URL value="@style.css" />
+	</stylesheets>
+</VBox>

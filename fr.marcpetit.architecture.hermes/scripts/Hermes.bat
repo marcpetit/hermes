@@ -1,0 +1,1 @@
+java --module-path .;lib --module fr.marcpetit.architecture.hermes/fr.marcpetit.architecture.hermes.views.Hermes
