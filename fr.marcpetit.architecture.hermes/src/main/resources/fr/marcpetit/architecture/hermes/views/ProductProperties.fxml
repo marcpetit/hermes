@@ -25,7 +25,7 @@
 		<Label text="milestones"/>
 		<ListView fx:id="milestones"/>
 		<VBox>
-			<Button text="Append milestone" onAction="#appendMilestone"/>
+			<Button fx:id="appendMilestone" text="Append milestone" onAction="#appendMilestone"/>
 			<TextField fx:id="milestone"/>
 		</VBox>
 	</HBox>
